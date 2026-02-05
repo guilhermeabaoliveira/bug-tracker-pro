@@ -1,0 +1,14 @@
+# Virtual environments (heavy and machine-specific)
+venv/
+env/
+.venv/
+
+# Local databases (we usually don't push .db files)
+*.db
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/
