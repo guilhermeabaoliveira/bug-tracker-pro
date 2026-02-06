@@ -1,8 +1,9 @@
 from pydantic import BaseModel
+from typing import Optional # <--- Adicione esta importação
 
 class BugCreate(BaseModel):
     title: str
-    description: str
+    description: Optional[str] = "No description provided" # <--- Mude aqui
     severity: str
 
 class BugResponse(BugCreate):
