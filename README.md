@@ -1,40 +1,61 @@
-# 🛡️ Bug Tracker Pro - International Edition
+# 🛡️ Bug Tracker Pro - Full Stack Edition
 
-This repository contains a professional REST API developed to manage and track software bugs, ensuring a structured workflow for development teams.
+This repository contains a professional Full Stack application developed to manage and track software bugs, featuring a decoupled architecture and real-time data synchronization.
 
-## 🚀 Technologies
-- **Python & FastAPI**: High-performance web framework.
-- **SQLAlchemy**: ORM for database communication.
-- **SQLite**: Reliable local database.
-- **Uvicorn**: ASGI server for running the application.
+## 🚀 Key Enhancements (Full Stack Migration)
+- **Decoupled Architecture**: Clearly separated `/frontend` (React) and `/backend` (FastAPI).
+- **Reactive Dashboard**: Real-time UI built with **Tailwind CSS v4** and **Lucide Icons**.
+- **Full CRUD Support**:
+    - **Create**: Integrated modal for reporting new issues.
+    - **Read**: Live statistics for "Total Issues" and "Critical Bugs".
+    - **Delete**: Secure removal of bug records with user confirmation.
+- **CORS Management**: Fully configured for secure communication between React and FastAPI.
 
-## 🧪 API Scenarios (CRUD)
-The project covers the essential bug management lifecycle:
-- **Create (POST)**: Register new bugs with severity levels.
-- **Read (GET)**: List all bugs or check server health.
-- **Update (PATCH)**: Specific endpoint to update bug severity status.
-- **Delete (DELETE)**: Remove bugs from the system.
+## 🛠️ Technologies
+- **Frontend**: React, Tailwind CSS v4, Axios, Lucide Icons.
+- **Backend**: Python, FastAPI, SQLAlchemy (ORM).
+- **Database**: SQLite (Reliable local storage).
 
-## 🛠️ How to run
-1. **Activate your virtual environment**: `.\venv\Scripts\activate`
-2. **Install dependencies**: `pip install fastapi uvicorn sqlalchemy`
-3. **Run the server**: `uvicorn main:app --reload --port 8001`
+## 🏁 How to run
+### Backend
+1. `cd backend`
+2. `.\venv\Scripts\activate`
+3. `pip install -r requirements.txt`
+4. `uvicorn main:app --reload`
+
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
 
 ---
 
-# 🛡️ Bug Tracker Pro - Edição Internacional
+# 🛡️ Bug Tracker Pro - Edição Full Stack
 
-Este repositório contém uma API REST profissional desenvolvida para gerenciar e rastrear bugs de software, garantindo um fluxo de trabalho estruturado para equipes de desenvolvimento.
+Este repositório contém uma aplicação Full Stack profissional desenvolvida para gerenciar e rastrear bugs de software, apresentando uma arquitetura desacoplada e sincronização de dados em tempo real.
 
-## 🚀 Tecnologias e Ferramentas
-- **Python & FastAPI**: Framework web de alta performance.
-- **SQLAlchemy**: ORM para comunicação com o banco de dados.
-- **SQLite**: Banco de dados local confiável.
-- **Uvicorn**: Servidor ASGI para rodar a aplicação.
+## 🚀 Melhorias Principais (Migração Full Stack)
+- **Arquitetura Desacoplada**: Separação clara entre `/frontend` (React) e `/backend` (FastAPI).
+- **Dashboard Reativo**: Interface em tempo real construída com **Tailwind CSS v4** e **Lucide Icons**.
+- **Suporte CRUD Completo**:
+    - **Create**: Modal integrado para reportar novos problemas.
+    - **Read**: Estatísticas ao vivo para "Total Issues" e "Critical Bugs".
+    - **Delete**: Remoção segura de registros com confirmação do usuário.
+- **Gerenciamento de CORS**: Totalmente configurado para comunicação segura entre React e FastAPI.
 
-## 🧪 Cenários da API (CRUD)
-O projeto cobre o ciclo de vida essencial de gerenciamento de bugs:
-- **Create (POST)**: Registra novos bugs com níveis de severidade.
-- **Read (GET)**: Lista todos os bugs ou verifica a saúde do servidor.
-- **Update (PATCH)**: Endpoint específico para atualizar o status de severidade.
-- **Delete (DELETE)**: Remove bugs do sistema.
+## 🛠️ Tecnologias e Ferramentas
+- **Frontend**: React, Tailwind CSS v4, Axios, Lucide Icons.
+- **Backend**: Python, FastAPI, SQLAlchemy (ORM).
+- **Database**: SQLite (Armazenamento local confiável).
+
+## 🏁 Como Executar
+### Backend
+1. `cd backend`
+2. `.\venv\Scripts\activate`
+3. `pip install -r requirements.txt`
+4. `uvicorn main:app --reload`
+
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
