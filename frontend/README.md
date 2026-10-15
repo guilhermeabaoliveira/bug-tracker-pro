@@ -1,16 +1,35 @@
-# React + Vite
+# Bug Tracker Pro — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React dashboard for listing, creating, and deleting issues through the FastAPI backend.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+From this directory, install dependencies and start Vite:
 
-## React Compiler
+```sh
+npm ci
+npm run dev -- --port 5173 --strictPort
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Node.js must be compatible with Vite 7 (20.19+ or 22.12+). Open [localhost:5173](http://localhost:5173). Start the backend separately using the [repository setup](../README.md#run-locally).
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Generate the frontend bundle in `dist/` |
+| `npm run preview` | Preview the generated bundle locally |
+| `npm run lint` | Run the configured ESLint checks |
+
+The API address is defined in `src/App.jsx` as `http://localhost:8000/bugs`. The backend CORS configuration accepts `http://localhost:5173`. A preview on another port requires a compatible backend CORS configuration; the preview command does not start the API.
+
+## Interface behavior
+
+- Fetches issues when the dashboard mounts and after a successful create or delete request.
+- Creates issues using a title and one of four severity options.
+- Requests browser confirmation before deletion.
+- Counts `High` and `Critical` records together in **Critical Bugs**.
+- Displays **System Status** as a fixed label rather than a service health check.
+
+Severity editing is exposed by the backend API but has no control in this interface. The dashboard uses HTTP requests rather than a real-time subscription.
