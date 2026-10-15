@@ -2,6 +2,10 @@
 
 A full-stack bug tracker with a React dashboard, a FastAPI REST API, and local SQLite persistence.
 
+[Demonstração](docs/demo.md) · [Executar](#execução-local) · [API](#api)
+
+![Dashboard do Bug Tracker Pro com registros fictícios](docs/images/dashboard.jpg)
+
 [English](#overview) · [Português](#visão-geral) · [Frontend guide](frontend/README.md)
 
 ## Overview
